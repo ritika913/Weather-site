@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather App</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="light">
+
+  <!-- 🧭 Navigation Bar -->
+  <header class="navbar">
+    <div class="navbar-left">
+      <span class="logo">🌤️ WeatherNow</span>
+    </div>
+    <nav class="navbar-right">
+      <a href="#" id="homeBtn">Home</a>
+      <a href="#" id="radarBtn">Radar</a>
+      <a href="#" id="forecastBtn">Forecast</a>
+      <a href="#" id="airBtn">Air Quality</a>
+      <a href="#" id="healthBtn">Health</a>
+
+      <!-- 🌙 Theme Toggle -->
+
+      <label class="theme-toggle switch">
+        <input type="checkbox" id="themeSwitch" />
+        <span class="slider"></span>
+      </label>
+      <span id="themeLabel">Light Mode</span>
+
+    </nav>
+  </header>
+
+  <!-- 🌍 Main Content -->
+  <main class="container">
+
+    <!-- Menu Section -->
+    <div id="menuSection">
+      <h1>Search City Weather</h1>
+      <div class="search-box">
+        <input type="text" id="cityInput" placeholder="Enter city name..." />
+        <button onclick="getWeather()">Search</button>
+      </div>
+      <button onclick="getLocation()" class="location-btn">📍 Use My Location</button>
+    </div>
+
+    <!-- Weather Section -->
+    <div id="weatherSection" class="hidden">
+      <div id="loader" class="loader hidden"></div>
+      <div class="weather-info" id="weatherInfo"></div>
+      <div class="forecast" id="forecast" class="hidden"></div>
+    </div>
+
+  </main>
+
+  <!-- JS -->
+  <script src="script.js" defer></script>
+</body>
+
+</html>
