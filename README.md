@@ -33,9 +33,6 @@ WeatherNow/
 │── README.md
 ```
 
-## 📸 Screenshots
-
-_Add screenshots of your application here._
 
 ## ⚙️ Installation
 
